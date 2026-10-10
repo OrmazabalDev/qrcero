@@ -116,6 +116,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .desktop-nav a:hover { color: var(--text); }
 .desktop-nav a:hover::after { right: 0; }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
+.language-picker{display:inline-flex;align-items:center}.language-picker select{appearance:none;min-width:58px;padding:9px 25px 9px 11px;border:1px solid var(--border);border-radius:999px;background-color:var(--bg-card);background-image:linear-gradient(45deg,transparent 50%,var(--text-soft) 50%),linear-gradient(135deg,var(--text-soft) 50%,transparent 50%);background-position:calc(100% - 13px) 50%,calc(100% - 9px) 50%;background-size:4px 4px,4px 4px;background-repeat:no-repeat;color:var(--text);font:700 12px/1 system-ui,sans-serif;cursor:pointer}.language-picker select:focus-visible{outline:2px solid var(--blue-bright);outline-offset:2px}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0}.evidence-card{padding:26px;border:1px solid var(--border);border-radius:22px;background:var(--surface)}.evidence-card h2,.evidence-card h3{margin-top:0}.evidence-card p:last-child{margin-bottom:0}.proof-steps{counter-reset:proof;display:grid;gap:14px;padding:0;list-style:none}.proof-steps li{counter-increment:proof;position:relative;padding:18px 18px 18px 58px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}.proof-steps li:before{content:counter(proof);position:absolute;left:17px;top:15px;display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:var(--blue);color:#fff;font-weight:800}.proof-note{margin:28px 0;padding:20px;border-left:3px solid var(--mint);border-radius:0 14px 14px 0;background:rgba(22,193,183,.08)}
+.language-picker select{background-color:var(--surface)}
 .icon-button { width: 39px; height: 39px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-glass); color: var(--text); cursor: pointer; }
 .theme-icon { display: block; width: 15px; height: 15px; margin: auto; border: 2px solid currentColor; border-radius: 50%; box-shadow: -6px -5px 0 -4px currentColor, 6px -5px 0 -4px currentColor, 0 7px 0 -4px currentColor; }
 
@@ -288,7 +291,7 @@ kbd { padding: 3px 5px; border: 1px solid currentColor; border-bottom-width: 2px
 
 @media (max-width: 760px) {
   :root { --shell: min(100% - 28px, 1180px); --radius: 20px; }
-  .section-pad{padding:90px 0}.nav-shell{min-height:68px}.nav-actions .button{display:none}.brand-copy small{display:none}
+  .section-pad{padding:90px 0}.nav-shell{min-height:68px}.nav-actions .button{display:none}.brand-copy small{display:none}.proof-grid,.evidence-grid{grid-template-columns:1fr}.language-picker select{min-width:54px;padding-left:9px}.nav-actions{gap:8px}
   .hero{padding-top:115px}.hero-grid{gap:20px}h1{font-size:clamp(44px,13vw,64px)}.trust-row{gap:13px;flex-wrap:wrap}.trust-row li{font-size:10px}.browser-frame{transform:none}.browser-stage{min-height:390px;padding:14px}.extension-panel{width:78%;right:12px}.floating-proof{display:none}.orbit-one,.orbit-two{width:380px;height:380px;left:50%;translate:-50% 0}
   .section-heading h2,.privacy-heading h2,.sticky-copy h2,.permissions-copy h2,.cta-shell h2{font-size:clamp(36px,11vw,56px)}
   .demo-input-panel,.demo-output-panel{padding:22px}.demo-qr-wrap{width:90%}.input-meta{display:grid}.transfer-rail{height:80px}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es-419" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><meta name="author" content="Ormazabal DEV"><meta name="theme-color" content="#07111f">
+  <meta name="description" content="Prueba pública de privacidad de QRCero: evidencia técnica, permisos, límites y pasos para comprobar su procesamiento local.">
+  <title>Prueba pública de privacidad de QRCero</title>
+  <link rel="canonical" href="https://ormazabaldev.github.io/qrcero/privacy-proof.html">
+  <meta property="og:site_name" content="QRCero"><meta property="og:type" content="article"><meta property="og:title" content="Prueba pública de privacidad de QRCero"><meta property="og:description" content="Evidencia técnica y pasos reproducibles para comprobar el procesamiento local de QRCero."><meta property="og:url" content="https://ormazabaldev.github.io/qrcero/privacy-proof.html"><meta property="og:image" content="https://ormazabaldev.github.io/qrcero/assets/brand/qrcero-social-preview.png">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="brand-upgrade.css"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body class="subpage">
+  <header class="site-header is-scrolled"><div class="shell nav-shell"><a class="brand qrcero-brand" href="index.html" aria-label="QRCero, inicio"><img src="assets/brand/qrcero-logo-light.svg" alt="QRCero" width="174" height="44"></a><div class="nav-actions"><a class="button button-small button-ghost" href="index.html">Volver al producto</a></div></div></header>
+  <main class="legal-main"><div class="shell legal-shell">
+    <div class="legal-heading"><span class="section-index">EVIDENCIA TÉCNICA</span><h1>Privacidad que puedes comprobar.</h1><p>Esta página documenta qué hace QRCero, qué no hace y cómo comprobarlo. Es una declaración técnica pública, no una auditoría independiente.</p></div>
+    <section aria-labelledby="verificable"><h2 id="verificable">Qué puedes verificar</h2><div class="evidence-grid">
+      <article class="evidence-card"><h3>Generación local</h3><p>La biblioteca que construye el QR está incluida en el paquete de la extensión y se ejecuta en el navegador.</p></article>
+      <article class="evidence-card"><h3>Sin servicios de QRCero</h3><p>La extensión no necesita una API, una cuenta ni un servidor de Ormazabal DEV para generar códigos.</p></article>
+      <article class="evidence-card"><h3>Sin código remoto</h3><p>El JavaScript ejecutado por la extensión está empaquetado con ella; no se descargan módulos ejecutables externos.</p></article>
+      <article class="evidence-card"><h3>Sin analítica ni anuncios</h3><p>La extensión no integra SDK de analítica, publicidad ni seguimiento de comportamiento.</p></article>
+    </div></section>
+    <section aria-labelledby="comprobar"><h2 id="comprobar">Cómo comprobarlo tú mismo</h2><ol class="proof-steps"><li>Abre las herramientas de desarrollador del popup o del service worker desde chrome://extensions.</li><li>Selecciona la pestaña Network, limpia el registro y genera varios códigos QR.</li><li>Comprueba que la generación no produce solicitudes a servidores de QRCero.</li><li>Revisa los permisos instalados y compáralos con la explicación publicada abajo.</li></ol></section>
+    <section aria-labelledby="limites"><h2 id="limites">Límites y matices</h2><div class="legal-content"><p>QRCero procesa el contenido que eliges después de una acción explícita. Eso incluye el portapapeles, una URL o una selección, según la función usada.</p><p>El historial está desactivado por defecto. Si lo activas, se guarda en el almacenamiento local de la extensión durante el plazo elegido.</p><p>La detección de contenido sensible es una protección heurística y no sustituye tu criterio. No conviertas secretos si no es necesario.</p><p>Chrome impide mostrar la tarjeta flotante en páginas internas y otros sitios protegidos; el popup sigue disponible.</p></div></section>
+    <aside class="proof-note"><strong>Esta evidencia no equivale a una certificación o auditoría de un tercero.</strong></aside>
+    <p><a class="button button-primary" href="index.html#permisos">Revisar permisos</a> <a class="button button-ghost" href="privacy.html">Ver política completa</a></p>
+  </div></main>
+  <footer class="site-footer compact-footer"><div class="shell footer-bottom"><span>© 2026 Ormazabal DEV</span><a href="support.html">Soporte</a></div></footer>
+  <script src="site-i18n.js"></script><script src="app.js"></script>
+</body>
+</html>
